@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja" xml:lang="ja">
+<head profile="http://purl.org/net/ns/metaprof">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="css/sss.css" />
+    <script type="text/javascript" src="js/lib/jquery.js"></script>
+    <script type="text/javascript" src="js/src/sss.js"></script>
+    <script type="text/javascript" src="js/src/sss.progressbar.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            var pr = new SSS.Presentation();
+            pr.addListener('key', 'Left',   'prev');
+            pr.addListener('key', 'Top',    'prev');
+            pr.addListener('key', 'Right',  'next');
+            pr.addListener('key', 'Bottom', 'next');
+            pr.addListener('key', 'Home',   'first');
+            pr.addListener('key', 'End',    'last');
+
+            var bar = new SSS.ProgressBar();
+
+            pr.start();
+        });
+    </script>
+    <title>SSS</title>
+</head>
+
+<body>
+    <div id="content">
+        <div class="page blank"></div>
+        <div class="page headline">
+            <h1>タイトル</h1>
+            <p class="description">概要</p>
+            <address>名前</address>
+        </div>
+        <div class="page blank"></div>
+        <div class="page subhead">
+            <h2>中見出し</h2>
+        </div>
+        <div class="page">
+            <h2>小見出し</h2>
+            <p>段落</p>
+            <ul>
+                <li>リスト</li>
+            </ul>
+            <pre>var code = 'test';</pre>
+        </div>
+        <div class="page blank"></div>
+    </div>
+</body>
+</html>
