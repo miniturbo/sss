@@ -33,6 +33,7 @@ SSS.ProgressBar = SSS.util.class.create({
         SSS.util.event.addListener(window, 'SSSPresentationPrev',  handler);
         SSS.util.event.addListener(window, 'SSSPresentationFirst', handler);
         SSS.util.event.addListener(window, 'SSSPresentationLast',  handler);
+        SSS.util.event.addListener(window, 'SSSPresentationChangePage', handler);
     },
 
     render: function(index, pr) {
